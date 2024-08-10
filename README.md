@@ -46,6 +46,8 @@ Then install all extensions through extension manager and follow the github link
 
 <img src="dracula-screenshot-1.png" />
 
+<img src="dracula-screenshot-2.png" />
+
 - oh-my-zsh (agnoster theme) - https://github.com/ohmyzsh/ohmyzsh
 - dracula-gtk - https://github.com/dracula/gtk
 - dracula-icons - https://draculatheme.com/gtk
