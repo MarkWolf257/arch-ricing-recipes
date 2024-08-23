@@ -1,14 +1,17 @@
 #!/bin/bash
 
-sudo pacman -Syu xorg-server gnome-shell gdm gnome-control-center gnome-shell-extensions gnome-tweaks gnome-shell-extension-caffeine gnome-shell-extension-vitals
+sudo pacman -Syu --noconfirm xorg-server gnome-shell gdm gnome-control-center gnome-shell-extensions gnome-tweaks gnome-shell-extension-caffeine gnome-shell-extension-vitals
 
-aurs=("text-engine" "extension-manager" "gnome-shell-extension-blur-my-shell" "gnome-shell-extension-forge") 
+aurs=("text-engine" "extension-manager" "gnome-shell-extension-blur-my-shell" "gnome-shell-extension-forge")
+
+mkdir aurs
+cd aurs
 
 for aur in ${aurs[@]}
 do
 	git clone https://aur.archlinux.org/$aur.git
 	cd $aur
-	makepkg -si
+	makepkg --no-confirm -si
 	cd ..
 done
 
@@ -21,7 +24,7 @@ done
 
 echo "Which terminal emulator do you want? (Enter package name; default alacritty)"
 read ${terminal:=alacritty}
-sudo pacman -S $terminal 
+sudo pacman -S --noconfirm $terminal 
 
 sudo systemctl enable gdm.service
 reboot
