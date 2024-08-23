@@ -1,57 +1,28 @@
-# Gnome Recipe
-This is a recipe to setup my gnome desktop environment from scratch with minimum bloat and a consistent theme.
-Install all the packages in order. Use commands to set default gui mode.
+# Arch Ricing Recipe
+This is a recipe to setup my gnome desktop environment from scratch with minimum bloat and an optional theme.
+In a fresh arch installation install git and clone this repository. Then run install-gnome script
 
-On Arch:
 ```
-sudo systemctl enable gdm.service
+sudo pacman -S git
+git clone https://github.com/MarkWolf257/arch-ricing-recipes.git
+cd arch-ricing-recipes
+./install-gnome
 ```
-
-On Debian:
-```
-sudo service gdm start
-```
-
-Then install all extensions through extension manager and follow the github link for desired theme configuration
 
 <br />
 
-## Ingredients (Download from the distro's package manager)
-- xorg
-- gnome-shell
-- gdm3
-- gnome-control-center
-- gnome-extensions-manager
-- gnome-extensions-app
-- gnome-tweaks
-- terminal emulator (alacritty)
-- shell (zsh)
-- browser (librewolf or firefox)
-- file manager (nemo)
-- code editor (neovim or vscode)
+## Packages to install
+- web browser
+- file manager
+- code editor
 
-<br />
-
-## Gnome Extensions (Download using the extension manager)
-- blur my shell
-- user themes
-- forge
-- vitals
-- caffeine
-- simple net speed
-
-<br />
-
-## Dracula Config (Follow their respective instructions)
+## Configuration Resources (Irrelevant screenshots follow)
 
 <img src="dracula-screenshot-1.png" />
 
 <img src="dracula-screenshot-2.png" />
 
-- oh-my-zsh (agnoster theme) - https://github.com/ohmyzsh/ohmyzsh
-- dracula-gtk - https://github.com/dracula/gtk
-- dracula-icons - https://draculatheme.com/gtk
-- dracula-walls - https://github.com/dracula/wallpaper
-- terminal colors (dracula) - https://github.com/mbadolato/iTerm2-Color-Schemes
-- neovim (nvchad, requires latest version nvim) - https://github.com/NvChad/NvChad
-- vscode (dracula extension)
+- starship prompt - https://github.com/starship/starship
+- gtk themes - https://github.com/vinceliuice/Colloid-gtk-theme
+- terminal colorschemes - https://github.com/mbadolato/iTerm2-Color-Schemes
+- neovim distro (requires latest version nvim) - https://github.com/NvChad/NvChad
