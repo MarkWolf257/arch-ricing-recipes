@@ -2,18 +2,20 @@
 
 sudo pacman -Syu --noconfirm xorg-server gnome-shell gdm gnome-control-center gnome-shell-extensions gnome-tweaks gnome-shell-extension-caffeine gnome-shell-extension-vitals
 
-aurs=("text-engine" "extension-manager" "gnome-shell-extension-blur-my-shell" "gnome-shell-extension-forge")
+mkdir AURs
+cd AURs
 
-mkdir aurs
-cd aurs
+aurs=("text-engine" "extension-manager" "gnome-shell-extension-blur-my-shell" "gnome-shell-extension-forge")
 
 for aur in ${aurs[@]}
 do
 	git clone https://aur.archlinux.org/$aur.git
 	cd $aur
-	makepkg --no-confirm -si
+	makepkg --noconfirm -si
 	cd ..
 done
+
+cd ..
 
 extensions=("blur-my-shell@aunetx" "caffeine@patapon.info" "Vitals@CoreCoding.com" "forge@jmmaranan.com") 
 
