@@ -17,7 +17,7 @@ done
 
 git clone https://github.com/vinceliuice/Colloid-gtk-theme.git
 cd Colloid-gtk-theme
-./install.sh --tweaks $1 --theme $2 --color $3
+./install.sh --tweaks $1 --theme $2 --color $3 --size compact
 cd ..
 
 git clone https://github.com/vinceliuice/Colloid-icon-theme.git
