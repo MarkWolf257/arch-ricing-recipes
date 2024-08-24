@@ -1,11 +1,11 @@
 #!/bin/bash
 
-sudo pacman -Syu --noconfirm xorg-server gnome-shell gdm gnome-terminal gnome-control-center gnome-shell-extensions gnome-tweaks gnome-shell-extension-caffeine gnome-shell-extension-vitals
+sudo pacman -Syu --noconfirm xorg-server gnome-shell gdm alacritty gnome-control-center gnome-shell-extensions gnome-tweaks gnome-shell-extension-caffeine gnome-shell-extension-vitals
 
 mkdir AURs
 cd AURs
 
-aurs=("text-engine" "extension-manager" "gnome-shell-extension-blur-my-shell" "gnome-shell-extension-forge")
+aurs=("text-engine" "extension-manager" "gnome-shell-extension-blur-my-shell" "gnome-shell-extension-forge" "zen-browser-optimized-bin")
 
 for aur in ${aurs[@]}
 do
