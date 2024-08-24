@@ -1,0 +1,9 @@
+import = ["colors.toml",]
+
+[window]
+padding = { x = 12, y = 12 }
+decorations = "None"
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+size = 12
