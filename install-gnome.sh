@@ -24,10 +24,18 @@ cd Colloid-gtk-theme
 ./install.sh --tweaks $1 --theme $2 --color $3 --size compact
 cd ..
 
+style=$(echo "Colloid $2 $3 Compact $1" | sed -E -e 's/ {2,}/ /g' -e 's/\<(.)/\u\1/g' -e 's/^ //' -e 's/ $//' -e 's/ /-/g')
+gsettings set org.gnome.desktop.interface gtk-theme "$style"
+gsettings set org.gnome.desktop.wm.preferences theme "$style"
+
+
 git clone https://github.com/vinceliuice/Colloid-icon-theme.git
 cd Colloid-icon-theme
 ./install.sh --scheme $1 --theme $2
 cd ..
+
+style=$(echo "Colloid $2 $1 $3" | sed -E -e 's/ {2,}/ /g' -e 's/\<(.)/\u\1/g' -e 's/^ //' -e 's/ $//' -e 's/ /-/g')
+gsettings set org.gnome.desktop.interface icon-theme "$style"
 
 cd ..
 
