@@ -26,7 +26,7 @@ cd ..
 
 style=$(echo "Colloid $2 $3 Compact $1" | sed -E -e 's/ {2,}/ /g' -e 's/\<(.)/\u\1/g' -e 's/^ //' -e 's/ $//' -e 's/ /-/g')
 gsettings set org.gnome.desktop.interface gtk-theme "$style"
-gsettings set org.gnome.desktop.wm.preferences theme "$style"
+gsettings set org.gnome.shell.extensions.user-theme name "$style"
 
 
 git clone https://github.com/vinceliuice/Colloid-icon-theme.git
