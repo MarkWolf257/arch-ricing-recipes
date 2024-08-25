@@ -15,6 +15,10 @@ do
 	cd ..
 done
 
+scheme=$(sed 's/\([a-z]\)/\u\1/1' <<< "$1")
+theme=$(sed 's/\([a-z]\)/\u\1/1' <<< "$2")
+color=$(sed 's/\([a-z]\)/\u\1/1' <<< "$3")
+
 git clone https://github.com/vinceliuice/Colloid-gtk-theme.git
 cd Colloid-gtk-theme
 ./install.sh --tweaks $1 --theme $2 --color $3 --size compact
